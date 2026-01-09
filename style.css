@@ -1,0 +1,456 @@
+/* ========================================
+   CSS Reset & Base Styles
+======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-background: #F5F7FB;
+    --color-text: #000000;
+    --color-white: #FFFFFF;
+    --color-gray-light: #E8EBEF;
+    --color-gray: #D1D5DB;
+    
+    --font-family: 'Poppins', sans-serif;
+    
+    --transition-default: all 0.3s ease;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   Hero Section
+======================================== */
+.hero {
+    min-height: 100vh;
+    position: relative;
+    padding: 40px 0 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+/* ========================================
+   Header Styles
+======================================== */
+.hero-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--color-gray);
+    flex-shrink: 0;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.3;
+}
+
+.profile-role {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--color-text);
+    opacity: 0.7;
+}
+
+/* Follow Button */
+.btn-follow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: var(--color-white);
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-family);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: var(--transition-default);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.btn-follow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.btn-follow svg {
+    transition: var(--transition-default);
+}
+
+.btn-follow:hover svg {
+    transform: translateX(4px);
+}
+
+/* ========================================
+   Hero Content
+======================================== */
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-text);
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.hero-description {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-text);
+    opacity: 0.7;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.btn-primary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    background-color: var(--color-white);
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-family);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: var(--transition-default);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary svg {
+    transition: var(--transition-default);
+}
+
+.btn-primary:hover svg {
+    transform: translateX(4px);
+}
+
+.btn-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--color-gray-light);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-default);
+    opacity: 0.6;
+}
+
+.btn-circle:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* ========================================
+   Hero Image
+======================================== */
+.hero-image {
+    flex-shrink: 0;
+    width: 450px;
+    height: 550px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: bottom;
+}
+
+/* Fallback Avatar */
+.hero-image.fallback-avatar {
+    background: linear-gradient(180deg, transparent 0%, var(--color-gray-light) 100%);
+    border-radius: 20px;
+}
+
+.hero-image.fallback-avatar::after {
+    content: '3D Avatar';
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-text);
+    opacity: 0.3;
+}
+
+/* ========================================
+   Bottom Line
+======================================== */
+.hero-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--color-gray);
+    opacity: 0.5;
+}
+
+/* ========================================
+   Animation Classes
+======================================== */
+.animate-item {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.animate-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-header.visible { transition-delay: 0s; }
+.hero-title.visible { transition-delay: 0.15s; }
+.hero-description.visible { transition-delay: 0.3s; }
+.hero-buttons.visible { transition-delay: 0.45s; }
+.hero-image.visible { transition-delay: 0.3s; }
+
+/* ========================================
+   Portfolio Section
+======================================== */
+.portfolio {
+    position: relative;
+    background-color: var(--color-background);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+/* Linha vertical - 35% da esquerda */
+.portfolio-line {
+    position: absolute;
+    left: calc(35% + 60px);
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: var(--color-gray);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+/* ========================================
+   Seções do Portfolio
+======================================== */
+.portfolio-section {
+    position: relative;
+}
+
+.portfolio-container {
+    display: flex;
+    position: relative;
+}
+
+/* ========================================
+   Coluna Esquerda - Texto (35%)
+======================================== */
+.portfolio-left {
+    width: 35%;
+    padding-right: 60px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* Texto Sticky - acompanha sua seção */
+.portfolio-text-wrapper {
+    position: sticky;
+    top: 20vh;
+}
+
+.portfolio-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--color-text);
+    letter-spacing: -0.01em;
+    max-width: 320px;
+}
+
+/* ========================================
+   Botão Sticky - Dentro do text-wrapper
+======================================== */
+.portfolio-sticky-btn {
+    margin-top: 24px;
+}
+
+.btn-portfolio {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    background-color: var(--color-white);
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-family);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: var(--transition-default);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.btn-portfolio:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-portfolio svg {
+    transition: var(--transition-default);
+}
+
+.btn-portfolio:hover svg {
+    transform: translateX(4px);
+}
+
+/* ========================================
+   Coluna Direita - Imagens (65%)
+======================================== */
+.portfolio-right {
+    width: 65%;
+    padding-left: 60px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.portfolio-images-stack {
+    position: relative;
+}
+
+/* ========================================
+   Cards de Imagem - TODOS com sobreposição
+======================================== */
+.portfolio-card {
+    position: sticky;
+    top: 15vh;
+    margin-bottom: 50vh;
+}
+
+/* Z-index crescente para sobreposição correta */
+.portfolio-card[data-card="1"] { z-index: 1; }
+.portfolio-card[data-card="2"] { z-index: 2; }
+.portfolio-card[data-card="3"] { z-index: 3; }
+.portfolio-card[data-card="4"] { z-index: 4; }
+.portfolio-card[data-card="5"] { z-index: 5; }
+.portfolio-card[data-card="6"] { z-index: 6; }
+.portfolio-card[data-card="7"] { z-index: 7; }
+.portfolio-card[data-card="8"] { z-index: 8; }
+.portfolio-card[data-card="9"] { z-index: 9; }
+
+.portfolio-card-inner {
+    width: 100%;
+    max-width: 650px;
+    aspect-ratio: 3/2;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: var(--color-gray-light);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.4s ease;
+}
+
+.portfolio-card-inner:hover {
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.18);
+}
+
+.portfolio-card-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Card ativo - borda azul */
+.portfolio-card.active .portfolio-card-inner {
+    box-shadow: 0 0 0 4px #3B82F6, 0 25px 70px rgba(59, 130, 246, 0.25);
+}
+
+/* ========================================
+   Spacer - Espaço para última imagem sobrepor
+======================================== */
+.portfolio-spacer {
+    height: 50vh;
+    pointer-events: none;
+}
+
+/* ========================================
+   Scroll Animate
+======================================== */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
