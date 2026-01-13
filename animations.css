@@ -1,0 +1,239 @@
+/* ========================================
+   Advanced Animations CSS
+======================================== */
+
+/* ========================================
+   Keyframes
+======================================== */
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-30px) rotate(3deg); }
+}
+
+@keyframes floatCard {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+}
+
+@keyframes sparkle {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.2) rotate(180deg); }
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollWheel {
+    0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+    50% { transform: translateX(-50%) translateY(12px); opacity: 0; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+    to { opacity: 0.7; transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes bounceIn {
+    0% { opacity: 0; transform: scale(0.3); }
+    50% { transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes rotate {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(360deg); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes ripple {
+    to { transform: scale(4); opacity: 0; }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(37, 99, 235, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(37, 99, 235, 0.6); }
+}
+
+@keyframes morph {
+    0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ========================================
+   Hover Animations
+======================================== */
+.hover-zoom { overflow: hidden; }
+.hover-zoom img { transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+.hover-zoom:hover img { transform: scale(1.1); }
+
+.hover-tilt { transition: transform 0.3s ease; transform-style: preserve-3d; }
+.hover-tilt:hover { transform: perspective(1000px) rotateX(5deg) rotateY(-5deg); }
+
+.hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.hover-lift:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); }
+
+.hover-glow { transition: box-shadow 0.3s ease; }
+.hover-glow:hover { box-shadow: 0 0 30px rgba(37, 99, 235, 0.4); }
+
+.hover-underline { position: relative; }
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+.hover-underline:hover::after { transform: scaleX(1); transform-origin: left; }
+
+/* ========================================
+   Scroll-Triggered Animations
+======================================== */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-animate.visible { opacity: 1; transform: translateY(0); }
+
+.fade-in { opacity: 0; }
+.fade-in.visible { opacity: 1; transition: opacity 0.8s ease; }
+
+.fade-in-up { opacity: 0; transform: translateY(40px); }
+.fade-in-up.visible { opacity: 1; transform: translateY(0); transition: opacity 0.8s ease, transform 0.8s ease; }
+
+.fade-in-down { opacity: 0; transform: translateY(-40px); }
+.fade-in-down.visible { opacity: 1; transform: translateY(0); transition: opacity 0.8s ease, transform 0.8s ease; }
+
+.fade-in-left { opacity: 0; transform: translateX(-40px); }
+.fade-in-left.visible { opacity: 1; transform: translateX(0); transition: opacity 0.8s ease, transform 0.8s ease; }
+
+.fade-in-right { opacity: 0; transform: translateX(40px); }
+.fade-in-right.visible { opacity: 1; transform: translateX(0); transition: opacity 0.8s ease, transform 0.8s ease; }
+
+.scale-in { opacity: 0; transform: scale(0.8); }
+.scale-in.visible { opacity: 1; transform: scale(1); transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+/* ========================================
+   Stagger Animations
+======================================== */
+.stagger-children > * { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.stagger-children.visible > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+.stagger-children.visible > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
+.stagger-children.visible > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
+.stagger-children.visible > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
+.stagger-children.visible > *:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
+.stagger-children.visible > *:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 0.5s; }
+
+/* ========================================
+   Button Ripple Effect
+======================================== */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+}
+
+/* ========================================
+   Loading Animations
+======================================== */
+.loading-skeleton {
+    background: linear-gradient(90deg, var(--color-gray-light) 25%, var(--color-gray) 50%, var(--color-gray-light) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+/* ========================================
+   Image Reveal Animations
+======================================== */
+.img-reveal { position: relative; overflow: hidden; }
+.img-reveal::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--color-accent);
+    transform: scaleX(1);
+    transform-origin: right;
+    z-index: 1;
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.img-reveal.visible::before { transform: scaleX(0); }
+.img-reveal img { transform: scale(1.3); transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1); }
+.img-reveal.visible img { transform: scale(1); }
+
+/* ========================================
+   Animated Gradient
+======================================== */
+.animated-gradient {
+    background: linear-gradient(-45deg, var(--color-accent), var(--color-accent-light), var(--color-success), var(--color-accent-dark));
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* ========================================
+   Morphing Shapes
+======================================== */
+.morphing-shape { animation: morph 8s ease-in-out infinite; }
+
+/* ========================================
+   Attention Seekers
+======================================== */
+.pulse-animation { animation: pulse 2s ease-in-out infinite; }
+.glow-animation { animation: glow 2s ease-in-out infinite; }
+
+/* ========================================
+   Prefers Reduced Motion
+======================================== */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .scroll-animate, .fade-in-up, .fade-in-down, .fade-in-left,
+    .fade-in-right, .scale-in, .animate-item, .reveal-item {
+        opacity: 1;
+        transform: none;
+    }
+}

@@ -3,426 +3,300 @@
 ======================================== */
 
 /* ========================================
+   Desktop Large (até 1400px)
+======================================== */
+@media screen and (max-width: 1400px) {
+    .container { max-width: 1200px; }
+    .hero-title { font-size: 3.5rem; }
+    .hero-image-wrapper { width: 400px; height: 500px; }
+}
+
+/* ========================================
    Tablet Landscape (até 1200px)
 ======================================== */
 @media screen and (max-width: 1200px) {
-    .container {
-        padding: 0 40px;
-    }
+    .container { padding: 0 40px; }
+    .nav-container { padding: 0 40px; }
 
-    .hero-title {
-        font-size: 2.25rem;
-    }
+    .hero-title { font-size: 3rem; }
+    .hero-image-wrapper { width: 360px; height: 450px; }
+    .hero-content { gap: 60px; }
 
-    .hero-image {
-        width: 380px;
-        height: 480px;
-    }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
 
-    .hero-content {
-        gap: 40px;
-    }
+    .portfolio-projects { padding: 0 40px; }
+    .portfolio-line { left: calc(35% + 40px); }
+    .portfolio-left { padding-right: 40px; }
+    .portfolio-right { padding-left: 40px; }
+    .portfolio-card-inner { max-width: 550px; }
+    .portfolio-title { font-size: 1.375rem; }
 
-    /* Portfolio */
-    .portfolio {
-        padding: 0 40px;
-    }
+    .about-grid { gap: 60px; }
+    .about-images { height: 550px; }
+    .about-image-main { width: 340px; height: 440px; }
+    .about-image-secondary { width: 240px; height: 300px; }
 
-    .portfolio-line {
-        left: calc(35% + 40px);
-    }
+    .section-title { font-size: 2.5rem; }
+    .cta-title { font-size: 3rem; }
 
-    .portfolio-left {
-        padding-right: 40px;
-    }
-
-    .portfolio-right {
-        padding-left: 40px;
-    }
-
-    .portfolio-card-inner {
-        max-width: 550px;
-    }
-
-    .portfolio-title {
-        font-size: 1.125rem;
-    }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ========================================
    Tablet Portrait (até 992px)
 ======================================== */
 @media screen and (max-width: 992px) {
-    .hero {
-        padding: 30px 0 0;
-    }
+    .nav-links { display: none; }
+    .nav-cta { display: none; }
+    .nav-menu-btn { display: flex; }
 
-    .hero-header {
-        margin-bottom: 60px;
-    }
+    .hero { padding: 100px 0 60px; }
+    .hero-header { margin-bottom: 60px; }
+    .hero-content { flex-direction: column-reverse; gap: 50px; }
+    .hero-text { max-width: 100%; text-align: center; }
+    .hero-title { font-size: 2.75rem; }
+    .hero-description { max-width: 100%; margin-left: auto; margin-right: auto; }
+    .hero-buttons { justify-content: center; }
+    .hero-stats { justify-content: center; }
+    .hero-image-wrapper { width: 320px; height: 400px; }
+    .floating-cards { display: none; }
+    .hero-image-badge { left: 50%; transform: translateX(-50%); bottom: 20px; }
+    .hero-social { justify-content: center; }
+    .status-badge { display: none; }
 
-    .hero-title {
-        font-size: 2rem;
-    }
+    .about-grid { grid-template-columns: 1fr; gap: 60px; }
+    .about-images { height: auto; display: flex; gap: 20px; }
+    .about-image { position: relative; }
+    .about-image-main { width: 60%; height: 400px; }
+    .about-image-secondary { width: 40%; height: 300px; align-self: flex-end; }
+    .about-content { padding-left: 0; }
+    .about-decoration { display: none; }
 
-    .hero-description {
-        font-size: 0.9375rem;
-    }
+    .services-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
 
-    .hero-image {
-        width: 320px;
-        height: 420px;
-    }
+    .portfolio-projects { padding: 0 40px; }
+    .portfolio-line { display: none; }
+    .portfolio-container { flex-direction: column; }
+    .portfolio-left { width: 100%; padding-right: 0; padding-top: 40px; padding-bottom: 20px; }
+    .portfolio-right { width: 100%; padding-left: 0; padding-top: 0; padding-bottom: 60px; }
+    .portfolio-text-wrapper { position: relative; top: auto; text-align: center; }
+    .project-metrics { justify-content: center; }
+    .portfolio-sticky-btn { text-align: center; }
+    .portfolio-card { position: relative; top: auto; margin-bottom: 30px; }
+    .portfolio-card-inner { max-width: 100%; margin: 0 auto; }
+    .portfolio-title { font-size: 1.5rem; max-width: 100%; }
+    .portfolio-spacer { height: 20px; }
 
-    .hero-text {
-        max-width: 500px;
-    }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
 
-    /* Portfolio - Layout em coluna */
-    .portfolio {
-        padding: 0 40px;
-    }
+    .contact-grid { grid-template-columns: 1fr; gap: 60px; }
 
-    .portfolio-line {
-        display: none;
-    }
-
-    .portfolio-container {
-        flex-direction: column;
-    }
-
-    .portfolio-left {
-        width: 100%;
-        padding-right: 0;
-        padding-top: 40px;
-        padding-bottom: 20px;
-    }
-
-    .portfolio-right {
-        width: 100%;
-        padding-left: 0;
-        padding-top: 0;
-        padding-bottom: 60px;
-    }
-
-    .portfolio-text-wrapper {
-        position: relative;
-        top: auto;
-    }
-
-    .portfolio-sticky-btn {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .portfolio-card {
-        position: relative;
-        top: auto;
-        margin-bottom: 30px;
-    }
-
-    .portfolio-images-stack .portfolio-card:last-child {
-        margin-bottom: 30px;
-    }
-
-    .portfolio-card-inner {
-        max-width: 100%;
-    }
-
-    .portfolio-title {
-        font-size: 1.25rem;
-        max-width: 100%;
-    }
+    .footer-top { flex-direction: column; gap: 40px; }
+    .footer-nav { flex-wrap: wrap; gap: 40px; }
 }
 
 /* ========================================
-   Mobile Landscape / Small Tablet (até 768px)
+   Mobile Landscape (até 768px)
 ======================================== */
 @media screen and (max-width: 768px) {
-    .container {
-        padding: 0 24px;
-    }
+    .container { padding: 0 24px; }
+    .nav-container { padding: 0 24px; }
 
-    .hero {
-        min-height: auto;
-        padding: 24px 0 60px;
-    }
+    .hero { min-height: auto; padding: 80px 0 50px; }
+    .hero-header { margin-bottom: 40px; flex-wrap: wrap; gap: 20px; }
+    .profile { gap: 12px; }
+    .avatar { width: 48px; height: 48px; }
+    .profile-name { font-size: 0.9375rem; }
+    .profile-role { font-size: 0.8125rem; }
 
-    .hero-header {
-        margin-bottom: 40px;
-    }
+    .hero-tag { font-size: 0.8125rem; padding: 8px 16px; margin-bottom: 24px; }
+    .hero-title { font-size: 2.25rem; }
+    .hero-description { font-size: 1rem; margin-bottom: 32px; }
+    .hero-buttons { flex-direction: column; width: 100%; }
+    .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+    .hero-stats { flex-wrap: wrap; gap: 24px; justify-content: center; }
+    .stat:not(:last-child)::after { display: none; }
+    .stat-number { font-size: 2rem; }
 
-    .profile {
-        gap: 12px;
-    }
+    .hero-image-wrapper { width: 280px; height: 350px; }
 
-    .avatar {
-        width: 48px;
-        height: 48px;
-    }
+    .scroll-indicator { display: none; }
 
-    .profile-name {
-        font-size: 0.9375rem;
-    }
+    .section-header { margin-bottom: 40px; }
+    .section-title { font-size: 2rem; }
+    .section-description { font-size: 1rem; }
 
-    .profile-role {
-        font-size: 0.8125rem;
-    }
+    .about, .services, .testimonials, .cta, .contact { padding: 80px 0; }
 
-    .btn-follow {
-        padding: 10px 20px;
-        font-size: 0.8125rem;
-    }
+    .about-images { flex-direction: column; }
+    .about-image-main { width: 100%; height: 350px; }
+    .about-image-secondary { width: 80%; height: 250px; align-self: center; margin-top: -40px; }
 
-    .btn-follow span {
-        display: none;
-    }
+    .service-card { padding: 30px; }
+    .service-number { font-size: 3rem; top: 20px; right: 20px; }
 
-    .btn-follow {
-        padding: 12px;
-        border-radius: 50%;
-    }
+    .portfolio-projects { padding: 0 24px; }
+    .portfolio-left { padding-top: 30px; }
+    .portfolio-title { font-size: 1.25rem; }
+    .portfolio-description { font-size: 0.875rem; }
+    .project-metrics { gap: 24px; }
+    .metric-value { font-size: 1.5rem; }
 
-    .hero-content {
-        flex-direction: column-reverse;
-        gap: 40px;
-        text-align: center;
-    }
+    .gallery-grid { grid-template-columns: 1fr; }
 
-    .hero-text {
-        max-width: 100%;
-    }
+    .testimonial-card { padding: 32px; }
+    .testimonial-text { font-size: 1.0625rem; }
 
-    .hero-title {
-        font-size: 1.75rem;
-        margin-bottom: 20px;
-    }
+    .cta-title { font-size: 2.25rem; }
+    .cta-description { font-size: 1rem; }
+    .cta-buttons { flex-direction: column; width: 100%; max-width: 320px; margin: 0 auto; }
+    .btn-large, .btn-outline { width: 100%; justify-content: center; }
 
-    .hero-description {
-        font-size: 0.875rem;
-        margin-bottom: 32px;
-        max-width: 100%;
-    }
+    .contact-form-wrapper { padding: 32px; }
 
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .btn-primary {
-        padding: 14px 28px;
-        font-size: 0.875rem;
-    }
-
-    .btn-circle {
-        width: 48px;
-        height: 48px;
-    }
-
-    .hero-image {
-        width: 280px;
-        height: 350px;
-    }
-
-    .hero-line {
-        display: none;
-    }
-
-    /* Portfolio */
-    .portfolio {
-        padding: 0 24px;
-    }
-
-    .portfolio-left {
-        padding-top: 30px;
-        text-align: center;
-    }
-
-    .portfolio-sticky-btn {
-        display: flex;
-        justify-content: center;
-    }
-
-    .portfolio-title {
-        font-size: 1.125rem;
-        max-width: 100%;
-    }
+    .footer { padding: 60px 0 30px; }
+    .footer-nav { gap: 30px; }
+    .footer-col h4 { margin-bottom: 16px; }
+    .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
 }
 
 /* ========================================
    Mobile Portrait (até 480px)
 ======================================== */
 @media screen and (max-width: 480px) {
-    .container {
-        padding: 0 20px;
-    }
+    .container { padding: 0 20px; }
+    .nav-container { padding: 0 20px; }
 
-    .hero {
-        padding: 20px 0 40px;
-    }
+    .hero { padding: 70px 0 40px; }
+    .hero-header { margin-bottom: 32px; }
+    .avatar { width: 44px; height: 44px; }
+    .profile-name { font-size: 0.875rem; }
+    .profile-role { font-size: 0.75rem; }
+    .hero-social { gap: 8px; }
+    .social-link { width: 38px; height: 38px; }
 
-    .hero-header {
-        margin-bottom: 32px;
-    }
+    .hero-tag { font-size: 0.75rem; padding: 6px 12px; }
+    .hero-title { font-size: 1.875rem; line-height: 1.2; }
+    .hero-description { font-size: 0.9375rem; line-height: 1.6; margin-bottom: 28px; }
+    .btn-primary { padding: 14px 24px; font-size: 0.875rem; }
+    .btn-secondary { padding: 14px 24px; font-size: 0.875rem; }
+    .hero-stats { gap: 20px; }
+    .stat-number { font-size: 1.75rem; }
+    .stat-label { font-size: 0.8125rem; }
 
-    .avatar {
-        width: 44px;
-        height: 44px;
-    }
+    .hero-image-wrapper { width: 240px; height: 300px; }
+    .hero-image-badge { padding: 10px 16px; }
+    .badge-icon { font-size: 1rem; }
+    .badge-text { font-size: 0.75rem; }
 
-    .profile-name {
+    .marquee-content span { font-size: 1rem; }
+
+    .section-tag { font-size: 0.75rem; padding: 6px 12px; }
+    .section-title { font-size: 1.75rem; }
+    .section-description { font-size: 0.9375rem; }
+
+    .about, .services, .testimonials, .cta, .contact { padding: 60px 0; }
+
+    .about-image-main { height: 300px; }
+    .about-image-secondary { height: 200px; }
+    .image-overlay { padding: 10px 16px; font-size: 1rem; }
+    .about-text p { font-size: 0.9375rem; }
+    .skill-name { font-size: 0.875rem; }
+    .skill-percent { font-size: 0.8125rem; }
+
+    .service-card { padding: 24px; }
+    .service-icon { width: 50px; height: 50px; margin-bottom: 20px; }
+    .service-icon svg { width: 24px; height: 24px; }
+    .service-number { font-size: 2.5rem; }
+    .service-title { font-size: 1.25rem; }
+    .service-description { font-size: 0.875rem; }
+    .service-image { height: 140px; }
+
+    .portfolio-projects { padding: 0 20px; }
+    .portfolio-filter { gap: 8px; }
+    .filter-btn { padding: 10px 18px; font-size: 0.8125rem; }
+    .portfolio-title { font-size: 1.125rem; }
+    .portfolio-description { font-size: 0.8125rem; }
+    .project-category { font-size: 0.6875rem; padding: 5px 10px; }
+    .metric-value { font-size: 1.25rem; }
+    .metric-label { font-size: 0.75rem; }
+    .btn-portfolio { padding: 12px 20px; font-size: 0.8125rem; }
+
+    .gallery-title { font-size: 1.25rem; }
+    .gallery-overlay { padding: 16px; }
+    .gallery-overlay h4 { font-size: 1rem; }
+
+    .testimonial-card { padding: 24px; }
+    .testimonial-text { font-size: 1rem; }
+    .author-avatar { width: 50px; height: 50px; }
+    .author-name { font-size: 0.9375rem; }
+    .author-role { font-size: 0.8125rem; }
+    .nav-btn { width: 42px; height: 42px; }
+
+    .clients-logos { gap: 24px; }
+    .client-logo img { max-height: 30px; }
+
+    .cta-title { font-size: 1.875rem; }
+    .cta-description { font-size: 0.9375rem; }
+    .btn-large { padding: 14px 28px; font-size: 0.9375rem; }
+    .btn-outline { padding: 14px 28px; font-size: 0.9375rem; }
+
+    .contact-form-wrapper { padding: 24px; }
+    .form-group label { font-size: 0.8125rem; }
+    .form-group input, .form-group select, .form-group textarea {
+        padding: 14px 16px;
         font-size: 0.875rem;
     }
 
-    .profile-role {
-        font-size: 0.75rem;
-    }
+    .contact-icon { width: 42px; height: 42px; }
+    .contact-icon svg { width: 18px; height: 18px; }
+    .contact-label { font-size: 0.75rem; }
+    .contact-text a, .contact-text span { font-size: 0.9375rem; }
+    .social-btn { width: 42px; height: 42px; }
 
-    .hero-content {
-        gap: 32px;
-    }
+    .footer { padding: 50px 0 24px; }
+    .footer-logo .logo-text { font-size: 1.25rem; }
+    .footer-tagline { font-size: 0.875rem; }
+    .footer-col h4 { font-size: 0.875rem; margin-bottom: 12px; }
+    .footer-col a, .footer-col span { font-size: 0.8125rem; }
+    .copyright { font-size: 0.8125rem; }
 
-    .hero-title {
-        font-size: 1.5rem;
-        line-height: 1.3;
-    }
-
-    .hero-description {
-        font-size: 0.8125rem;
-        line-height: 1.6;
-        margin-bottom: 28px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .btn-primary {
-        width: 100%;
-        justify-content: center;
-        padding: 16px 24px;
-    }
-
-    .btn-circle {
-        display: none;
-    }
-
-    .hero-image {
-        width: 240px;
-        height: 300px;
-    }
-
-    /* Portfolio */
-    .portfolio {
-        padding: 0 20px;
-    }
-
-    .portfolio-title {
-        font-size: 1rem;
-    }
-
-    .portfolio-card {
-        margin-bottom: 20px;
-    }
-
-    .btn-portfolio {
-        padding: 12px 20px;
-        font-size: 0.8125rem;
-    }
+    .back-to-top { width: 44px; height: 44px; bottom: 20px; right: 20px; }
 }
 
 /* ========================================
    Mobile Extra Small (até 360px)
 ======================================== */
 @media screen and (max-width: 360px) {
-    .container {
-        padding: 0 16px;
-    }
+    .container { padding: 0 16px; }
+    .nav-container { padding: 0 16px; }
 
-    .hero-title {
-        font-size: 1.375rem;
-    }
+    .hero-title { font-size: 1.625rem; }
+    .hero-description { font-size: 0.875rem; }
+    .hero-image-wrapper { width: 200px; height: 260px; }
+    .btn-primary, .btn-secondary { padding: 12px 20px; font-size: 0.8125rem; }
 
-    .hero-description {
-        font-size: 0.8125rem;
-    }
+    .section-title { font-size: 1.5rem; }
+    .portfolio-title { font-size: 1rem; }
+    .cta-title { font-size: 1.625rem; }
 
-    .hero-image {
-        width: 200px;
-        height: 260px;
-    }
-
-    .btn-primary {
-        padding: 14px 20px;
-        font-size: 0.8125rem;
-    }
-
-    /* Portfolio */
-    .portfolio {
-        padding: 0 16px;
-    }
-
-    .portfolio-title {
-        font-size: 0.9375rem;
-    }
-
-    .btn-portfolio {
-        padding: 10px 18px;
-        font-size: 0.75rem;
-    }
+    .portfolio-projects { padding: 0 16px; }
 }
 
 /* ========================================
-   Ajustes para telas muito altas
+   Tall Screens
 ======================================== */
 @media screen and (min-height: 900px) and (min-width: 992px) {
-    .hero {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .hero-header {
-        margin-bottom: 100px;
-    }
+    .hero { display: flex; flex-direction: column; justify-content: center; }
+    .hero-header { margin-bottom: 100px; }
 }
 
 /* ========================================
-   Preferência de movimento reduzido
+   Print Styles
 ======================================== */
-@media (prefers-reduced-motion: reduce) {
-    .animate-item {
-        opacity: 1;
-        transform: none;
-    }
-
-    .animate-item.visible {
-        transition: none;
-    }
-
-    .scroll-animate {
-        opacity: 1;
-        transform: none;
-    }
-
-    .scroll-animate.visible {
-        transition: none;
-    }
-
-    .btn-follow:hover,
-    .btn-primary:hover,
-    .btn-circle:hover,
-    .btn-portfolio:hover {
-        transform: none;
-    }
-
-    .btn-follow:hover svg,
-    .btn-primary:hover svg,
-    .btn-portfolio:hover svg {
-        transform: none;
-    }
-
-    .portfolio-card-inner:hover {
-        transform: none;
-    }
+@media print {
+    .nav, .scroll-indicator, .back-to-top, .cursor, .cursor-follower, .scroll-progress { display: none; }
+    .hero { min-height: auto; padding: 40px 0; }
+    .floating-cards { display: none; }
+    * { animation: none !important; transition: none !important; }
 }
